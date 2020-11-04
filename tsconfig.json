@@ -6,14 +6,17 @@
         "declaration": true,
         "experimentalDecorators": true,
         "moduleResolution": "node",
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
+        "esModuleInterop": true,
         "stripInternal": true,
         "jsx": "react",
-        "outDir": "dist"
+        "outDir": "dist",
+        "plugins": [
+            { "transform": "./src/index.ts", "extensions": [".yaml", ".txt"] }
+        ]
     },
     "include": [
-        "src/**/*"
+        "src",
+        "test"
     ],
     "exclude": [
         "node_modules",

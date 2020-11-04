@@ -1,49 +1,29 @@
 {
-  "name": "ts-transform-img",
-  "version": "0.4.2",
-  "description": "Allow `import * as img from 'foo.png'` in TS",
+  "name": "ts-import-text",
+  "version": "0.1.0",
+  "description": "Allow importing text files in TS.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "test": "rm -rf test/fixture/*.js && mocha --require ts-node/register test/**/*.test.ts",
-    "prettier": "prettier --print-width=120 --tab-width=4 --single-quote --trailing-comma=es5 --no-semi --parser=typescript --write 'src/**/*.ts*' 'test/**/*.ts*' || true",
+    "build": "ttsc",
+    "test": "yarn build && mocha 'dist/test/**/*.test.js'",
     "prepublishOnly": "tsc"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/longlho/ts-transform-img.git"
   },
   "keywords": [
     "typescript",
     "transform",
-    "png"
+    "text"
   ],
-  "author": "Long Ho",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/longlho/ts-transform-img/issues"
-  },
-  "homepage": "https://github.com/longlho/ts-transform-img#readme",
   "devDependencies": {
     "@types/chai": "^4.2.3",
-    "@types/fs-extra": "9",
     "@types/mocha": "^8.0.0",
     "@types/node": "^14.0.18",
     "chai": "^4.2.0",
-    "fs-extra": "^9.0.1",
-    "glob": "^7.1.4",
     "mocha": "^8.0.1",
-    "pre-commit": "^1.2.2",
-    "prettier": "^2.0.5",
-    "ts-node": "^8.4.1"
+    "ts-node": "^8.4.1",
+    "ttypescript": "^1.5.12"
   },
   "dependencies": {
-    "@types/loader-utils": "^2.0.1",
-    "loader-utils": "^1.2.3",
     "typescript": "^3.6.3"
-  },
-  "pre-commit": [
-    "prettier",
-    "test"
-  ]
+  }
 }

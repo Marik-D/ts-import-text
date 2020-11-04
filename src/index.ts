@@ -1,1 +1,3 @@
-export { default as transform } from './transform'
+import { transform } from './transform'
+
+export default transform;
