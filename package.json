@@ -2,8 +2,8 @@
   "name": "ts-import-text",
   "version": "0.1.0",
   "description": "Allow importing text files in TS.",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "scripts": {
     "build": "ttsc",
     "test": "yarn build && mocha 'dist/test/**/*.test.js'",
